@@ -1,6 +1,6 @@
-# 🚀 Ansible Apache Deployment
+#   Ansible Apache Deployment
 
-## 📌 Overview
+##  Overview
 This project demonstrates automated deployment of an Apache web server on AWS EC2 using Ansible.
 
 ##  Architecture
@@ -25,6 +25,8 @@ Ansible Control Node → SSH → Target EC2 → Apache Deployment
 
 ##  Access
 http://<target-ec2-public-ip>
+
+
 
 <img width="1341" height="378" alt="image" src="https://github.com/user-attachments/assets/a6e62c20-3725-4381-b5d4-6d874e33f2bb" />
 
