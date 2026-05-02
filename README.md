@@ -23,6 +23,10 @@ Ansible Control Node → SSH → Target EC2 → Apache Deployment
 - inventory.ini → Target server details
 - install_apache.yml → Ansible playbook
 
+## running Ansible Playbook -
+
+[ec2-user@ip-172-31-6-192 ansible-apache-deployment]$ ansible-playbook -i inventory.ini install_apache.yml PLAY [Install and configure Apache web server] ************************************************************************************************************************* TASK [Gathering Facts] ************************************************************************************************************************************************* [WARNING]: Platform linux on host 172.31.25.177 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.15/reference_appendices/interpreter_discovery.html for more information. ok: [172.31.25.177] TASK [Install Apache package] ****************************************************************************************************************************************** changed: [172.31.25.177] TASK [Start and enable Apache service] ********************************************************************************************************************************* changed: [172.31.25.177] TASK [Deploy custom index page] **************************************************************************************************************************************** changed: [172.31.25.177] PLAY RECAP ************************************************************************************************************************************************************* 172.31.25.177 : ok=4 changed=3 unreachable=0 failed=0 skipped=0 rescued=0 ignored=0 [ec2-user@ip-172-31-6-192 ansible-apache-deployment]$
+
 ##  Access
 http://<target-ec2-public-ip>
 
